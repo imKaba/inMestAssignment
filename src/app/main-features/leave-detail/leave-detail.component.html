@@ -1,0 +1,15 @@
+<div>
+    <h1>Leave detail of {{ leave.id }}</h1>
+    <p>
+        Hello, 
+    </p>
+    <p>
+        <strong>{{ leave.created_by }}</strong> has requested for a <strong>{{leave.type}}</strong> from <strong>{{leave.startDate}}</strong> to <strong>{{leave.endDate}}</strong> 
+    </p>
+
+    <p>
+        the current status is <strong class="btn btn-success">{{leave.status}} </strong> last modified in <strong> {{leave.last_modified }}</strong> by <strong> {{ leave.status_changed_by }}</strong>
+    </p>
+
+
+</div>

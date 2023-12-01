@@ -1,0 +1,41 @@
+<table class="table">
+<thead>
+    <th>User ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Cohort</th>
+    <th>Action</th>
+</thead>
+<tbody>
+    <tr>
+        <td>1</td>
+        <td>Fleur</td>
+        <td>Sessinou</td>
+        <td>fluer.sessinou&#64;meltwater.com</td>
+        <td>2024</td>
+        <td>
+            <a class="btn btn-link" [routerLink]="['/user-detail']" [queryParams]="{id: 1}">
+                
+                <i class="fa fa-eye"></i>
+            </a>
+        </td>
+    </tr>
+
+    @for (user of users; track user.userID) {
+        <tr>
+            <td>{{user.userID}}</td>
+            <td>{{user.firstname}}</td>
+            <td>{{user.lastname}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.cohort}}</td>
+            <td>
+                <a class="btn btn-link" [routerLink]="['/user-detail']" [queryParams]="{id : user.userID}">
+                    <i class="fa fa-eye"></i>
+                </a>
+            </td>
+        </tr>
+    }
+
+</tbody>
+</table>

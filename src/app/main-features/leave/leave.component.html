@@ -1,0 +1,51 @@
+<!-- <h1>Leaves</h1>
+  <h2>List of Leaves:</h2>
+  <ul>
+    @for (leave of leaves; track $index) {
+    <li>
+      <strong>Type:</strong> {{ leave.type }}<br>
+      <strong>Start Date:</strong> {{ leave.startDate }}<br>
+      <strong>End Date:</strong> {{ leave.endDate }}
+    </li>
+    }
+  </ul> -->
+
+<table class="table">
+<thead>
+    <th>Leave ID</th>
+    <th>Leave Type</th>
+    <th>Start Date Name</th>
+    <th>End Date</th>
+    <th>Created By</th>
+    <th>Status</th>
+    <th>Last Modified</th>
+    <th>Status changed by</th>
+    <th>Action</th>
+</thead>
+<tbody>
+<tbody>
+    @for (leave of leaves; track leave.id) {
+        <tr>
+            <td>{{leave?.id}}</td>
+            <td>{{leave?.type}}</td>
+            <td>{{leave?.startDate}}</td>
+            <td>{{leave?.endDate}}</td>
+            <td>{{leave?.created_by}}</td>
+            @if (leave?.status=='Approved') {
+            <td><button class="btn btn-outline-success">{{leave?.status}}</button></td>
+            }
+            @else{
+            <td><button class="btn btn-outline-danger">{{leave?.status}}</button></td>
+            }
+            <td>{{leave?.last_modified}}</td>
+            <td>{{leave?.status_changed_by}}</td>
+            <td>
+                <a class="btn btn-link" [routerLink]="['/leave', leave.id, leave.created_by]">
+                    <i class="fa fa-eye"></i>
+                </a>
+            </td>
+        </tr>
+    }
+
+</tbody>
+</table>
