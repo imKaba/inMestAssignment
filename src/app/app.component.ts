@@ -44,6 +44,7 @@ export class AppComponent implements OnChanges, OnInit  {
   }
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes, 'changes');
+    console.log('hello');
     for(const inputChange in changes) {
       console.log(changes[inputChange].firstChange, inputChange);
     }
