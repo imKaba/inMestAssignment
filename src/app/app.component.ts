@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './auth/login/login.component';
 import { SideNavComponent } from './_app/common/side-nav/side-nav.component';
+import { HeaderComponent } from './header/header.component';
 import { MaterialModule } from './material/material.module';
 
 @Component({
@@ -15,7 +16,8 @@ import { MaterialModule } from './material/material.module';
     FormsModule, 
     LoginComponent, 
     SideNavComponent,
-    MaterialModule
+    MaterialModule,
+    HeaderComponent
     ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

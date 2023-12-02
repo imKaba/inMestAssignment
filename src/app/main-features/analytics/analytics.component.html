@@ -1,1 +1,125 @@
-<p>analytics works!</p>
+<header class="custom-header">
+    <div class="header-content">
+        <mat-icon aria-hidden="false" aria-label="Example notifications icon" fontIcon="notifications"></mat-icon>
+        <mat-icon aria-hidden="false" aria-label="Example settings icon" fontIcon="settings"></mat-icon>
+    </div>
+  </header>
+  
+
+
+<br><br>
+
+<div class="example-button-row">
+    <button mat-fab extended color="primary">
+      <mat-icon>analytics</mat-icon>
+      Analytics
+    </button>
+
+    <button mat-fab extended disabled>
+        <mat-icon>search</mat-icon>
+        filter
+      </button>
+</div>  
+
+<br>
+
+<div class="card-container">
+<mat-card>
+    <mat-card-content>Enterpreneurs In Training</mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-content>Attendance</mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-content>No. of Requests</mat-card-content>
+  </mat-card>
+</div>
+
+  <br>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Request vs Attendance</mat-card-title>
+    </mat-card-header>
+    <mat-card-actions>
+        <mat-spinner></mat-spinner>
+    </mat-card-actions>
+  </mat-card>
+
+  <br>
+
+  <mat-card>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>Redial</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+      </mat-menu>
+      
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+      
+        <!-- Employee Column -->
+        <ng-container matColumnDef="employee">
+          <th mat-header-cell *matHeaderCellDef> Employee </th>
+          <td mat-cell *matCellDef="let element"> {{element.employee}} </td>
+        </ng-container>
+      
+        <!-- Role Column -->
+        <ng-container matColumnDef="role">
+          <th mat-header-cell *matHeaderCellDef> Role </th>
+          <td mat-cell *matCellDef="let element"> {{element.role}} </td>
+        </ng-container>
+      
+        <!-- Id Column -->
+        <ng-container matColumnDef="Id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- Type Column -->
+        <ng-container matColumnDef="type">
+            <th mat-header-cell *matHeaderCellDef> Type </th>
+            <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+          </ng-container>
+        
+        <!-- Status Column -->
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+          </ng-container>
+        
+        <!-- Action Column -->
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef> Action </th>
+            <td mat-cell *matCellDef="let element"> {{element.action}} </td>
+          </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+      
+
+  </mat-card>
