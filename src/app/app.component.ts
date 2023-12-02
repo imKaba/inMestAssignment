@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './auth/login/login.component';
 import { SideNavComponent } from './_app/common/side-nav/side-nav.component';
 import { MaterialModule } from './material/material.module';
+import { HeaderComponent } from './_app/common/header/header.component';
+
 
 @Component({
   selector: 'app-root',
@@ -15,7 +17,8 @@ import { MaterialModule } from './material/material.module';
     FormsModule, 
     LoginComponent, 
     SideNavComponent,
-    MaterialModule
+    MaterialModule,
+    HeaderComponent
     ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -28,10 +31,10 @@ export class AppComponent implements OnChanges, OnInit  {
   }
 
   title = 'inmest-web';
-  name = "Lucky";
+  name = "Kaba";
   profile = {
     id: 1,
-    first_name: "Lucky",
+    first_name: "Kaba",
     last_name: "Dogbey"
   }
   genesis = "hello";

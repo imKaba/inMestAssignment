@@ -2,13 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { LeaveService } from '../../services/leave.service';
+import { MatTabsModule } from '@angular/material/tabs';
+import {MatTableModule} from '@angular/material/table';
 
 @Component({
   selector: 'app-leave',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, MatTabsModule, MatTableModule],
   templateUrl: './leave.component.html',
-  styleUrl: './leave.component.scss'
+  styleUrl: './leave.component.scss',
 })
 
 export class LeaveComponent implements OnInit {
@@ -27,4 +29,6 @@ export class LeaveComponent implements OnInit {
   ngOnInit(): void {
       this.getLeaves();
   }
+  displayedColumns: string[] = ['id', 'EIT_id', 'type', 'date', 'status'];
+  dataSource = this.leaves;
 }

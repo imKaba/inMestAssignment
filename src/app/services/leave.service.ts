@@ -7,116 +7,105 @@ import { of } from 'rxjs';
 export class LeaveService {
   private leavesDB = [
     {
-      id: 1,
-      type: 'Vacation',
-      startDate: '2023-01-01',
-      endDate: '2023-01-05',
-      created_by: 'John Doe',
-      status: 'Approved',
-      last_modified: '2023-01-05',
-      status_changed_by: 'Manager1',
+        "id": 1,
+        "EIT_id": "john.doe@meltwater.org",
+        "type": "Sick Leave",
+        "date": "2023-09-15",
+        "status": "Pending"
     },
     {
-      id: 2,
-      type: 'Sick Leave',
-      startDate: '2023-02-10',
-      endDate: '2023-02-12',
-      created_by: 'Jane Smith',
-      status: 'Pending',
-      last_modified: '2023-02-08',
-      status_changed_by: 'Supervisor1',
+        "id": 2,
+        "EIT_id": "jane.smith@meltwater.org",
+        "type": "Property",
+        "date": "2023-10-20",
+        "status": "Accepted"
     },
     {
-      id: 3,
-      type: 'Vacation',
-      startDate: '2023-03-15',
-      endDate: '2023-03-20',
-      created_by: 'Alice Johnson',
-      status: 'Approved',
-      last_modified: '2023-03-20',
-      status_changed_by: 'Manager2',
+        "id": 3,
+        "EIT_id": "peter.johnson@meltwater.org",
+        "type": "Sick Leave",
+        "date": "2023-11-05",
+        "status": "Declined"
     },
-    { 
-      id: 13, 
-      type: 'Vacation', 
-      startDate: '2024-01-20', 
-      endDate: '2024-01-25', 
-      created_by: 'Michael Brown', 
-      status: 'Pending', 
-      last_modified: '2024-01-18', 
-      status_changed_by: 'Supervisor2' 
+    {
+        "id": 4,
+        "EIT_id": "emily.brown@meltwater.org",
+        "type": "Property",
+        "date": "2023-08-10",
+        "status": "Accepted"
     },
-    { 
-      id: 14, 
-      type: 'Personal Leave', 
-      startDate: '2024-02-14', 
-      endDate: '2024-02-16', 
-      created_by: 'Eva Davis', 
-      status: 'Approved', 
-      last_modified: '2024-02-16', 
-      status_changed_by: 'Manager3' 
+    {
+        "id": 5,
+        "EIT_id": "olivia.jackson@meltwater.org",
+        "type": "Property",
+        "date": "2023-12-02",
+        "status": "Pending"
     },
-    { 
-      id: 15, 
-      type: 'Sick Leave', 
-      startDate: '2024-03-22', 
-      endDate: '2024-03-24', 
-      created_by: 'Chris Wilson', 
-      status: 'Pending', 
-      last_modified: '2024-03-20', 
-      status_changed_by: 'Supervisor3' 
+    {
+        "id": 6,
+        "EIT_id": "william.anderson@meltwater.org",
+        "type": "Sick Leave",
+        "date": "2023-11-20",
+        "status": "Accepted"
     },
-    { 
-      id: 16, 
-      type: 'Vacation', 
-      startDate: '2024-04-10', 
-      endDate: '2024-04-15', 
-      created_by: 'Sophie Turner', 
-      status: 'Approved', 
-      last_modified: '2024-04-15', 
-      status_changed_by: 'Manager4' 
+    {
+        "id": 7,
+        "EIT_id": "sophia.miller@meltwater.org",
+        "type": "Property",
+        "date": "2023-09-30",
+        "status": "Declined"
     },
-    { 
-      id: 17, 
-      type: 'Sick Leave', 
-      startDate: '2024-05-08', 
-      endDate: '2024-05-10', 
-      created_by: 'Oliver White', 
-      status: 'Pending', 
-      last_modified: '2024-05-05', 
-      status_changed_by: 'Supervisor4' 
+    {
+        "id": 8,
+        "EIT_id": "daniel.wilson@meltwater.org",
+        "type": "Sick Leave",
+        "date": "2023-10-12",
+        "status": "Pending"
     },
-    { 
-      id: 18, 
-      type: 'Vacation', 
-      startDate: '2024-06-15', 
-      endDate: '2024-06-20', 
-      created_by: 'Isabel Martinez', 
-      status: 'Approved', 
-      last_modified: '2024-06-20', 
-      status_changed_by: 'Manager5' 
+    {
+        "id": 9,
+        "EIT_id": "olivia.rodriguez@meltwater.org",
+        "type": "Property",
+        "date": "2023-11-28",
+        "status": "Accepted"
     },
-    { 
-      id: 19, 
-      type: 'Personal Leave', 
-      startDate: '2024-07-05', 
-      endDate: '2024-07-08', 
-      created_by: 'Lucas Brown', 
-      status: 'Pending', 
-      last_modified: '2024-07-03', 
-      status_changed_by: 'Supervisor5' 
+    {
+        "id": 10,
+        "EIT_id": "lucas.garcia@meltwater.org",
+        "type": "Sick Leave",
+        "date": "2023-12-01",
+        "status": "Declined"
     },
-    { 
-      id: 20, 
-      type: 'Sick Leave', 
-      startDate: '2024-08-12', 
-      endDate: '2024-08-14', 
-      created_by: 'Mia Johnson', 
-      status: 'Approved', 
-      last_modified: '2024-08-14', 
-      status_changed_by: 'Manager6' 
+    {
+        "id": 10,
+        "EIT_id": "michael.martinez@meltwater.org",
+        "type": "Property",
+        "date": "2023-12-15",
+        "status": "Pending"
     },
-    ]
+    {
+        "id": 11,
+        "EIT_id": "sophie.thomas@meltwater.org",
+        "type": "Sick Leave",
+        "date": "2023-11-25",
+        "status": "Accepted"
+    },
+    {
+        "id": 12,
+        "EIT_id": "gabriel.peterson@meltwater.org",
+        "type": "Property",
+        "date": "2023-10-18",
+        "status": "Declined"
+    },
+    {
+        "id": 13,
+        "EIT_id": "oliver.hernandez@meltwater.org",
+        "type": "Sick Leave",
+        "date": "2023-09-20",
+        "status": "Pending"
+    }
+  ]
+
   constructor() { }
 
   getLeaves() {

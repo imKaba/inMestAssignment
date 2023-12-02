@@ -1,0 +1,18 @@
+div.req-body {
+    width: 100%;
+    background-color: #ff0000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+
+div.req-body .body-head {
+    align-self: flex-start;
+}
+.requests-wrapper {
+    width: 70vw;
+}
+
+

@@ -22,11 +22,7 @@ export class LeaveDetailComponent implements OnInit {
 
   ngOnInit(): void {
       this.route.params.subscribe(param => {
-        console.log(param);
         this.leave_id = param['id'];
-        this.created_by = param['name'];
-        console.log(this.created_by);
-        console.log(this.leave_id);
         this.getMyLeaveById(parseInt(this.leave_id));
       });
 

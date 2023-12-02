@@ -1,0 +1,22 @@
+@use "@material/button/styles";
+
+mat-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: #21999d;
+    color: white;
+}
+
+
+.mdc-button__label {
+    color: white;
+}
+
+i{
+    color: white;
+}
+
+button.mdc-button__label {
+    border: 2px solid white;
+}
