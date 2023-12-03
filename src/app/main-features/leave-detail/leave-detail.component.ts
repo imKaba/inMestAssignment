@@ -34,7 +34,4 @@ export class LeaveDetailComponent implements OnInit {
       this.leave = response;
     }));
   }
-
-
-
 }
