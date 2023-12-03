@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './auth/login/login.component';
 import { SideNavComponent } from './_app/common/side-nav/side-nav.component';
 import { MaterialModule } from './material/material.module';
-import { HeaderComponent } from './_app/common/header/header.component';
+import { TopNavComponent } from './_app/common/header/header.component';
 
 
 @Component({
@@ -18,7 +18,7 @@ import { HeaderComponent } from './_app/common/header/header.component';
     LoginComponent, 
     SideNavComponent,
     MaterialModule,
-    HeaderComponent
+    TopNavComponent
     ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

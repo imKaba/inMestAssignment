@@ -1,22 +1,75 @@
-@use "@material/button/styles";
+// @use "@material/button/styles";
 
-mat-toolbar {
+// mat-toolbar {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: flex-end;
+//     background-color: #21999d;
+//     color: white;
+// }
+
+
+// .mdc-button__label {
+//     color: white;
+// }
+
+// i{
+//     color: white;
+// }
+
+// button.mdc-button__label {
+//     border: 2px solid white;
+// }
+
+
+nav {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    background-color: #21999d;
-    color: white;
+    align-items: center;
+    background-color: #21999D;
+    padding: 1rem 3.5rem;
+}
+
+.right-nav {
+    margin-left: auto;
+    gap: 1rem !important;
+}
+
+svg {
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: .5rem;
+}
+.right-nav , .user-container {
+    display: flex;
+    align-items: center;
 }
 
 
-.mdc-button__label {
-    color: white;
+.user-container {
+    border: 1px solid white;
+    padding: .25rem;
+    border-radius: 32px;
 }
 
-i{
-    color: white;
+.user_img_container {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
-button.mdc-button__label {
-    border: 2px solid white;
+.user_img_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+select {
+    background-color: transparent !important;
+    color: rgb(0, 0, 0);
+    border: none;
+}
+
+.right-nav svg{
+    cursor: pointer;
 }
