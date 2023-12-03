@@ -77,7 +77,9 @@
             <!-- Name Column -->
             <ng-container matColumnDef="EIT_id">
               <th mat-header-cell *matHeaderCellDef> EIT ID </th>
-              <td mat-cell *matCellDef="let element"> {{element.EIT_id}} </td>
+              <td mat-cell *matCellDef="let element">
+                <a [routerLink]="['/leave', element.id]">{{element.EIT_id}} </a>
+              </td>
             </ng-container>
 
             <!-- Weight Column -->

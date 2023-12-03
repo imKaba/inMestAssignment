@@ -12,7 +12,6 @@ import { LeaveService } from '../../services/leave.service';
 })
 export class LeaveDetailComponent implements OnInit {
   leave_id = '';
-  created_by = '';
   leave: any;
 
   constructor(
@@ -32,6 +31,7 @@ export class LeaveDetailComponent implements OnInit {
   getMyLeaveById(id: number){
     this.leaveService.getLeaveByID(id).subscribe((response => {
       this.leave = response;
+      console.log(this.leave);
     }));
   }
 }

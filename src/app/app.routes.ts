@@ -16,6 +16,6 @@ export const routes: Routes = [
     {'path': 'calendar', component: AttendanceComponent},
     {'path': 'analytics', component: AnalyticsComponent},
     {'path': 'leave', component: LeaveComponent},
-    {'path': 'leave/:id/', component: LeaveDetailComponent},
+    {'path': 'leave/:id', component: LeaveDetailComponent},
     
 ];

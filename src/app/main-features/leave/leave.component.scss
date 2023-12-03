@@ -56,7 +56,15 @@ mat-card-content table.mat-mdc-table {
     background-color: #b39afd;
 }
 
-// sicj leave button 
+#mat-tab-content-0-0 > div > mat-card > mat-card-content > table > tbody > tr > td.mat-mdc-cell.mdc-data-table__cell.cdk-cell.cdk-column-EIT_id.mat-column-EIT_id.ng-star-inserted > a {
+    color: black;
+}
+#mat-tab-content-0-0 > div > mat-card > mat-card-content > table > tbody > tr > td.mat-mdc-cell.mdc-data-table__cell.cdk-cell.cdk-column-EIT_id.mat-column-EIT_id.ng-star-inserted > a:hover {
+    color: #21999d;
+    font-weight: bold;
+}
+
+// sick leave button 
 #mat-tab-content-0-0 > div > mat-card > mat-card-content > table > tbody > tr > td.mat-mdc-cell.mdc-data-table__cell.cdk-cell.cdk-column-type.mat-column-type.ng-star-inserted > button,
 #mat-tab-content-0-0 > div > mat-card > mat-card-content > table > tbody > tr > td.mat-mdc-cell.mdc-data-table__cell.cdk-cell.cdk-column-type.mat-column-type.ng-star-inserted > button.Sick {
     border-color: green;
