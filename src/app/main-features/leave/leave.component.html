@@ -83,7 +83,11 @@
             <!-- Weight Column -->
             <ng-container matColumnDef="type">
               <th mat-header-cell *matHeaderCellDef> Type </th>
-              <td mat-cell *matCellDef="let element"> {{element.type}} </td>
+              <td mat-cell *matCellDef="let element">
+              <button mat-fab extended class={{element?.type}}>
+              {{ element.type }}
+              </button>
+              </td>
             </ng-container>
 
             <!-- Symbol Column -->
