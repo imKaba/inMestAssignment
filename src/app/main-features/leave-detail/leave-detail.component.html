@@ -1,6 +1,29 @@
-<div>
+<!-- <div>
     <h1>Leave detail of {{ leave.id }}</h1>
     <p>
         Hello, 
     </p>
+</div> -->
+
+<div class="details-container mat-elevation-z2">
+    <div></div>
+    <a class="return-button" [routerLink]="['/leave',]">Return to Leaves</a>
+    <div class="details-section mat-card">
+        <h4>Leave Details </h4>
+        <div class="details-content">
+            <p>From: {{ leave?.EIT_id }} </p>
+            <p>Type: {{ leave?.type }}</p>
+            <!-- Add more details about the leave request -->
+            <p>Date: {{ leave?.date }}</p>
+            <p>Status: {{ leave?.status }}</p>
+        </div>
+    </div>
+
+<br>
+    <div class="action-buttons">
+        <button mat-raised-button color="primary" class="accept-button" (click)="acceptRequest()">Accept Leave</button>
+        <button mat-raised-button color="warn" class="decline-button" (click)="declineRequest()">Decline Leave</button>
+    </div>
 </div>
+
+  
