@@ -7,6 +7,7 @@ import { AnalyticsComponent } from './main-features/analytics/analytics.componen
 import { LeaveComponent } from './main-features/leave/leave.component';
 import { UserDetailComponent } from './main-features/user-detail/user-detail.component';
 import { LeaveDetailComponent } from './main-features/leave-detail/leave-detail.component';
+import { ItSupportComponent } from './main-features/it-support/it-support.component';
 
 export const routes: Routes = [
     {'path': '', component: HomeComponent},
@@ -17,5 +18,7 @@ export const routes: Routes = [
     {'path': 'analytics', component: AnalyticsComponent},
     {'path': 'leave', component: LeaveComponent},
     {'path': 'leave/:id', component: LeaveDetailComponent},
+    {'path': 'it-support', component: ItSupportComponent},
+
     
 ];

@@ -16,12 +16,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-analytics',
   standalone: true,
-  imports: [CommonModule,NgApexchartsModule,],
+  imports: [CommonModule,NgApexchartsModule, RouterLink],
   templateUrl: './analytics.component.html',
   styleUrl: './analytics.component.scss'
 })

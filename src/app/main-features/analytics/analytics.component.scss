@@ -7,7 +7,29 @@ div.home   {
     display: flex;
 }
 
+.it-support-top{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
 
+.route-element1{
+    display: flex;
+    gap: 5px;
+    background-color: rgba(48, 223, 209, 0.25);
+    border-radius: 50px;
+    padding: 15px;
+    align-items: center;
+    height: fit-content;
+    color: #21999D;
+}
+
+.route-element1 p, .route-element1 i {
+    background-color: transparent;
+    height: fit-content;
+    margin: 0;
+}
 .card-body{
     margin: 1rem;
     border: 1px solid grey;
