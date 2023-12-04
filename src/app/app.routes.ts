@@ -9,6 +9,7 @@ import { UserDetailComponent } from './main-features/user-detail/user-detail.com
 import { LeaveDetailComponent } from './main-features/leave-detail/leave-detail.component';
 import { ItSupportComponent } from './main-features/it-support/it-support.component';
 import { AttendanceInnerComponent } from './main-features/attendance-inner/attendance-inner.component';
+import { AttendanceRegisterComponent } from './main-features/attendance-register/attendance-register.component';
 
 
 export const routes: Routes = [
@@ -23,6 +24,7 @@ export const routes: Routes = [
     {'path': 'it-support', component: ItSupportComponent},
     {'path': 'attendance', component: AttendanceComponent},
     {'path': 'attendance/:id', component: AttendanceInnerComponent},
+    {'path': 'attendance-register', component: AttendanceRegisterComponent},
 
     
 ];
