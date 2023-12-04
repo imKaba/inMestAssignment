@@ -1,0 +1,44 @@
+<div class="container">
+    <br>
+    <a  style="color: #21999d;" [routerLink]="['/attendance']">Retour Attendance</a>
+    <br>
+  <mat-card class="header">Heading</mat-card>
+
+  <div class="row">
+    <mat-card class="col-md-4">
+      <mat-icon>face</mat-icon>
+    </mat-card>
+    <mat-card class="col-md-8">
+      <ul class="att">
+        <li>Role <span>{{attendanceInner?.role}}</span></li>
+        <li>Skills <span>{{attendanceInner?.skills}}</span></li>
+        <li>EIT ID <span>{{attendanceInner?.eit_id}}</span></li>
+        <li>Status <span>{{attendanceInner?.status}}</span></li>
+        <li>Milestone <span>{{attendanceInner?.milestone}}</span></li>
+      </ul>
+    </mat-card>
+  </div>
+
+  <div class="row">
+    <mat-card class="col-md-12">
+      <h1>Attendance Details</h1>
+      <ul class="att">
+        <li>Number of Days <span>{{attendanceInner?.number_of_working_days}}</span></li>
+        <li>Number of Times Mest in <span>{{attendanceInner?.number_of_times_mest_in}}</span></li>
+        <li>Most Missed Class <span>{{attendanceInner?.most_missed_classes}}</span></li>
+        <li>Time Reporting <span>{{attendanceInner?.reporting_time}}</span></li>
+        <li>Absence <span>{{attendanceInner?.absense}}</span></li>
+        <li>Punctuality <span>{{attendanceInner?.punctuality}}</span></li>
+        <li>Request <span>{{attendanceInner?.requests}}</span></li>
+      </ul>
+    </mat-card>
+  </div>
+
+  <mat-card>
+    <h1>Absence Analytics</h1>
+    <!-- Place your ng-apexcharts component here for analytics -->
+    <div class="chart card">
+            <apx-chart [series]="series" [chart]="chart" [title]="title"></apx-chart>
+</div>
+  </mat-card>
+</div>
