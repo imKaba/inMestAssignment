@@ -1,4 +1,8 @@
 # InmestWeb
+## Team yST:
+- Tumisang L. Swabi
+- Nana Sika A. Antwi
+- Mahamadou Kaba
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
 
