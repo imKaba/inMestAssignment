@@ -22,15 +22,6 @@ div.requests-wrapper > mat-tab-group > mat-tab-header > div > div > div {
     background-color: white;
 }
 
-#mat-tab-label-0-0 > span.mdc-tab-indicator > span,
-#mat-tab-label-0-1 > span.mdc-tab-indicator > span {
-    border-color: #21999d;
-}
-
-#mat-tab-label-0-0 > span.mdc-tab__content > span,
-#mat-tab-label-0-1 > span.mdc-tab__content > span {
-    color: black;
-}
 
 /* Cards and Tables */
 
@@ -48,12 +39,6 @@ button.Pending {
     background-color: #b39afd;
 }
 
-/* Anchor Hover Effect */
-
-#mat-tab-content-0-0 > div > mat-card > mat-card-content > table > tbody > tr > td.mat-mdc-cell.mdc-data-table__cell.cdk-cell.cdk-column-EIT_id.mat-column-EIT_id.ng-star-inserted > a:hover {
-    color: #21999d;
-    font-weight: bold;
-}
 
 
 button.Sick{
@@ -68,10 +53,8 @@ button.Property {
     border-color: blue;
     background-color: white;
     color: blue;
-    border: 1px solid;
 }
 
-/* Additional Styles */
 
 div.req-body {
     
