@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { LeaveService } from '../../services/leave.service';
@@ -9,13 +9,13 @@ import { MaterialModule } from './../../material/material.module';
 
 
 
+
 @Component({
   selector: 'app-leave',
   standalone: true,
   imports: [CommonModule, RouterLink, MatTabsModule, MatTableModule, MatCardModule, MaterialModule],
   templateUrl: './leave.component.html',
   styleUrl: './leave.component.scss',
-  encapsulation: ViewEncapsulation.None
 })
 
 export class LeaveComponent implements OnInit {
@@ -30,6 +30,8 @@ export class LeaveComponent implements OnInit {
   getLeaves() {
     this.leaveService.getLeaves().subscribe((response:any) => {
       this.leaves = response;
+      console.log(this.leaves)
+      
     })
   }
 
@@ -37,6 +39,7 @@ export class LeaveComponent implements OnInit {
       this.getLeaves();
       this.displayedColumns = ['id', 'EIT_id', 'type', 'date', 'status'];
       this.dataSource = this.leaves;
+      console.log(this.dataSource)
   }
 
 }
