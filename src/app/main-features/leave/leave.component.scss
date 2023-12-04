@@ -1,6 +1,3 @@
-@use "@material/button/styles";
-
-/* Buttons */
 
 div.body-head > button.xhead {
     background-color: #21999d;
@@ -79,7 +76,7 @@ div.body-head {
 }
 
 table td, th {
-    color: black !important;
+    color: black;
     text-align: center;
 }
 
